@@ -8,3 +8,38 @@ body {
 .pdd-left {
   padding-left: 7rem;
 }
+
+/* Css Bagian Index */
+
+.foto{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* margin-left: 500px; */
+  margin: auto;
+  margin-top: 50px;
+  
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+}
+
+.containerIntro{
+  margin-top: auto;
+  margin-top: 40px;
+}
+
+.intro{
+  color: aliceblue;
+}
+
+.nama{
+  color: aliceblue;
+}
+
+/* Akhir Css bagian Index */
