@@ -2,10 +2,12 @@ body {
   /* background-color: antiquewhite; */
   /* background-image: url('../assets/img/bg.png'); */
   background-color: #2c3e50;
+   /* background-color:rgba(43, 13, 179, 0.3); */
  
 }
 .bg-nav {
-  background-color: #192a56;
+  /* background-color: #192a56; */
+  background-color:rgba(43, 13, 179, 0.3);
 }
 
 .pdd-left {
@@ -40,6 +42,19 @@ img {
 .intro{
   color: aliceblue;
   /* color: black; */
+}
+
+.font-progres{
+  /* color: black; */
+  color: aliceblue;
+}
+
+.trans {
+  background-color:rgba(255, 255, 255, 0.1);
+}
+
+.trans-2 {
+  background-color:rgba(43, 13, 179, 0.3);
 }
 
 .nama{
