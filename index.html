@@ -14,9 +14,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,7 +32,9 @@
 
 </head>
 
-<body>
+<body class="theme-bw">
+  <div class="custom-cursor"></div>
+  <div class="scanlines"></div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
@@ -62,43 +62,21 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
-    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+  <section id="hero">
+    <div id="heroCarousel" class="container-fluid hero-container">
 
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Hello, <br> <span>I'm M Fadil Muhtarom Laoegi</span></h2>
-          <!-- <p class="animate__animated fanimate__adeInUp">I am a Full Stack Developer</p> -->
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        <div class="carousel-container glass-card">
+          <div class="hero-content">
+            <h2 class="animate__animated animate__fadeInDown fw-bold">Fadil <span class="japanese-sub">ファディル</span></h2>
+            <p class="animate__animated animate__fadeInUp subtitle">FULL STACK DEVELOPER • MOBILE • WEB</p>
+            <div class="hero-actions">
+              <a href="#about" class="btn-anime animate__animated animate__fadeInUp scrollto">EXPLORE // 探検</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Mobile Developer</h2>
-          <p class="animate__animated animate__fadeInUp">Full stack</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Web Developer</h2>
-          <p class="animate__animated animate__fadeInUp">Front-end</p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-        </div>
-      </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
 
     </div>
 
@@ -127,8 +105,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
-          <h2>About</h2>
-          <p>Who am I</p>
+          <h2>STORY // 物語</h2>
+          <p>The Developer</p>
         </div>
 
         <div class="row content" data-aos="fade-up">
@@ -162,24 +140,18 @@
       <div class="container">
 
         <ul class="nav nav-tabs row d-flex">
-          <li class="nav-item col-3" data-aos="zoom-in">
+          <li class="nav-item col-md-6" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="ri-gps-line"></i>
-              <h4 class="d-none d-lg-block">Web Development</h4>
+              <span class="tab-jp">ウェブ開発 // 01</span>
+              <h4>Web Development</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+          <li class="nav-item col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="ri-body-scan-line"></i>
-              <h4 class="d-none d-lg-block">Mobile Development</h4>
+              <span class="tab-jp">モバイル開発 // 02</span>
+              <h4>Mobile Development</h4>
             </a>
           </li>
-          <!-- <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-              <i class="ri-sun-line"></i>
-              <h4 class="d-none d-lg-block">Video Editing</h4>
-            </a>
-          </li> -->
         </ul>
 
         <div class="tab-content" data-aos="fade-up">
@@ -192,14 +164,16 @@
                   <!-- Describsi -->
                 </p>
                 <ul>
-                  <li><i class="ri-check-double-line"></i> Laravel </li>
-                  <li><i class="ri-check-double-line"></i> React JS </li>
-                  <li><i class="ri-check-double-line"></i> Bootstrap </li>
-                  <li><i class="ri-check-double-line"></i> TailWind CSS</li>
+                  <li><i class="ri-subtract-line"></i> Laravel</li>
+                  <li><i class="ri-subtract-line"></i> CodeIgniter</li>
+                  <li><i class="ri-subtract-line"></i> React JS</li>
+                  <li><i class="ri-subtract-line"></i> Vue JS</li>
+                  <li><i class="ri-subtract-line"></i> Bootstrap</li>
+                  <li><i class="ri-subtract-line"></i> TailWind CSS</li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-1.png" alt="" class="img-fluid">
+                <img src="assets/img/web_dev_anime.png" alt="Web Development" class="img-fluid anime-feat-img">
               </div>
             </div>
           </div>
@@ -212,13 +186,12 @@
                   <!-- Describsi -->
                 </p>
                 <ul>
-                  <li><i class="ri-check-double-line"></i> Flutter</li>
-                  <li><i class="ri-check-double-line"></i> Kotlin</li>
-                  <li><i class="ri-check-double-line"></i> Java</li>
+                  <li><i class="ri-subtract-line"></i> Flutter</li>
+                  <li><i class="ri-subtract-line"></i> React Native</li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-2.png" alt="" class="img-fluid">
+                <img src="assets/img/mobile_dev_anime.png" alt="Mobile Development" class="img-fluid anime-feat-img">
               </div>
             </div>
           </div>
@@ -231,17 +204,17 @@
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
-
-        <div class="row" data-aos="zoom-out">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>fadilfdl2710@gmail.com</h3>
-            <!-- <p>Under Development :( </p> -->
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+        <div class="cta-glass-content">
+          <div class="row" data-aos="zoom-out">
+            <div class="col-lg-9 text-center text-lg-start">
+              <span class="cta-jp">お問い合わせ // CONTACT</span>
+              <h3>fadilfdl2710@gmail.com</h3>
+            </div>
+            <div class="col-lg-3 cta-btn-container text-center">
+              <a class="btn-anime align-middle" href="mailto:fadilfdl2710@gmail.com">SEND MESSAGE</a>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
     <!-- End Cta Section -->
@@ -251,23 +224,25 @@
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
-          <h2>Services</h2>
+          <h2>CAPABILITIES // 能力</h2>
           <p>What I Offer</p>
         </div>
 
         <div class="row">
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-6 col-md-6 mb-4">
             <div class="icon-box" data-aos="zoom-in-left">
-              <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
+              <span class="service-no">01 // ウェブ</span>
+              <div class="icon"><i class="bi bi-window-split"></i></div>
               <h4 class="title"><a href="">Web Development</a></h4>
-              <p class="description">---</p>
+              <p class="description">Creating high-performance, responsive websites with modern frameworks.</p>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 mt-5 mt-md-0">
+          <div class="col-lg-6 col-md-6 mb-4">
             <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
+              <span class="service-no">02 // モバイル</span>
+              <div class="icon"><i class="bi bi-phone"></i></div>
               <h4 class="title"><a href="">Mobile Development</a></h4>
-              <p class="description">---</p>
+              <p class="description">Developing intuitive, high-quality mobile applications for Android & iOS.</p>
             </div>
           </div>
 
@@ -287,30 +262,33 @@
 
         <div class="container-fluid">
           <div class="row">
-            <div class="card">
-              <div class="card-header text-light bg-dark">
-                <b>Mobile Development</b>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary bg-light text-black">Check Portofolio</a>
+            <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up">
+              <div class="card glass-card">
+                <div class="card-header border-0 bg-transparent">
+                  <span class="project-tag">MODERN // MOBILE</span>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold">MOBILE DEVELOPMENT</h5>
+                  <p class="card-text text-muted">Developing cutting-edge mobile solutions using Flutter and native technologies.</p>
+                  <a target="_blank" href="https://github.com/fadillaoegi?tab=repositories" class="btn-anime btn-small">VIEW PROJECT // 表示</a>
+                </div>
               </div>
             </div>
 
-            <div class="mt-5"></div>
-            <div class="row">
-              <div class="card">
-                <div class="card-header text-light bg-dark">
-                  <b>Web Development</b>
+            <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="card glass-card">
+                <div class="card-header border-0 bg-transparent">
+                  <span class="project-tag">MODERN // WEB</span>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary bg-light text-black">Check Portofolio</a>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold">WEB DEVELOPMENT</h5>
+                  <p class="card-text text-muted">Building responsive, modern web applications with React, Laravel, and more.</p>
+                  <a target="_blank" href="https://github.com/fadillaoegi?tab=repositories" class="btn-anime btn-small">VIEW PROJECT // 表示</a>
                 </div>
               </div>
-
+            </div>
+          </div>
+        </div>
 
               <!-- <div class="col">
               <div class="card-body">
@@ -349,55 +327,68 @@
               </div>
             </div> -->
 
-
-
-            </div>
-          </div>
-    </section>
     <!-- End Portfolio Section -->
 
 
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
 
-        <div class="section-title" data-aos="zoom-out">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+        <div class="section-title">
+          <h2>お問い合わせ // CONTACT US</h2>
         </div>
 
-        <div class="row mt-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="info glass-card">
+              <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                  <div class="address">
+                    <i class="bi bi-geo-alt"></i>
+                    <span class="contact-jp">所在地 // LOCATION</span>
+                    <h4>Surabaya, ID</h4>
+                  </div>
+                </div>
 
-          <div class="col-lg-4" data-aos="fade-right">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Surabaya</p>
-                <!--                 <p>Surabaya, Perumahan Marinir Golf v No.14 Kelurahan Gunungsari Kecamatan Dukuh Pakis</p> -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                  <div class="email copy-trigger" data-copy="fadilfdl2710@gmail.com" title="Click to copy">
+                    <i class="bi bi-envelope"></i>
+                    <span class="contact-jp">メール // EMAIL</span>
+                    <h4>fadilfdl2710@gmail.com</h4>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="phone copy-trigger" data-copy="+6285211119246" title="Click to copy">
+                    <i class="bi bi-phone"></i>
+                    <span class="contact-jp">お電話 // CALL</span>
+                    <h4>+62 852 1111 9246</h4>
+                  </div>
+                </div>
               </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>fadilfdl2710@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+62 852 1111 9246</p>
-              </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+
+    <script>
+    document.querySelectorAll('.copy-trigger').forEach(item => {
+      item.addEventListener('click', function() {
+        const text = this.getAttribute('data-copy');
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = this.querySelector('h4').innerText;
+          const h4 = this.querySelector('h4');
+          h4.innerText = 'COPIED! // 完了';
+          h4.style.color = '#fff';
+          setTimeout(() => {
+            h4.innerText = originalText;
+          }, 2000);
+        });
+      });
+    });
+    </script><!-- End Contact Section -->
 
   </main><!-- End #main -->
 

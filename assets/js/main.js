@@ -249,4 +249,21 @@
     })
   });
 
+  /**
+   * Custom Cursor Logic
+   */
+  const cursor = select('.custom-cursor');
+  document.addEventListener('mousemove', (e) => {
+    if (cursor) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    }
+  });
+
+  const interactiveElements = select('a, button, .btn-anime, .nav-link, .portfolio-item', true);
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => cursor?.classList.add('active'));
+    el.addEventListener('mouseleave', () => cursor?.classList.remove('active'));
+  });
+
 })()
