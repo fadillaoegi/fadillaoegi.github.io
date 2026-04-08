@@ -33,6 +33,13 @@
 </head>
 
 <body class="theme-bw">
+
+  <!-- ======= Preloader ======= -->
+  <div id="preloader">
+    <div class="line"></div>
+    <div class="loader-text">INITIALIZING // 起動中</div>
+  </div>
+
   <div class="custom-cursor"></div>
   <div class="scanlines"></div>
 
@@ -101,7 +108,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about reveal">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
@@ -136,7 +143,7 @@
     <!-- End About Section -->
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
+    <section id="features" class="features reveal">
       <div class="container">
 
         <ul class="nav nav-tabs row d-flex">
@@ -220,7 +227,7 @@
     <!-- End Cta Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services reveal">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
@@ -252,7 +259,7 @@
     <!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio reveal">
       <div class="container justify-content-center">
 
         <div class="section-title" data-aos="zoom-out">
@@ -426,6 +433,27 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+    <script>
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+      }, 1000);
+    });
+
+    // Reveal animations on scroll
+    const reveal = () => {
+      const reveals = document.querySelectorAll('.reveal');
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = el.getBoundingClientRect().top;
+        if (revealTop < windowHeight - 150) {
+          el.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    </script>
 </body>
 
 </html>
