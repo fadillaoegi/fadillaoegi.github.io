@@ -275,17 +275,17 @@
     <section id="portfolio" class="portfolio reveal">
       <div class="container justify-content-center">
 
-        <div class="section-title reveal d-flex flex-wrap justify-content-between align-items-end" data-aos="zoom-out">
+        <div class="section-title d-flex flex-wrap justify-content-between align-items-end" data-aos="fade-up">
           <div>
             <h2>PORTFOLIO // 作品集</h2>
             <p>My Project</p>
           </div>
-          <a href="assets/CV-Fadil - Mobile.pdf" target="_blank" class="btn-anime btn-small mb-4">DOWNLOAD CV // 履歴書</a>
+          <a href="assets/CV-Fadil - Mobile.pdf" target="_blank" class="btn-anime btn-small mb-4" data-aos="fade-left" data-aos-delay="200">DOWNLOAD CV // 履歴書</a>
         </div>
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up">
+            <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
               <div class="card glass-card">
                 <div class="card-header border-0 bg-transparent">
                   <span class="project-tag">MODERN // MOBILE</span>
@@ -298,7 +298,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
               <div class="card glass-card">
                 <div class="card-header border-0 bg-transparent">
                   <span class="project-tag">MODERN // WEB</span>
@@ -423,7 +423,7 @@
       <div class="footer-branding">
         <h3>FLdev <span class="japanese-sub">ファディル</span></h3>
       </div>
-      <div class="social-links">
+      <div class="social-links" data-aos="fade-up" data-aos-delay="200">
         <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
         <a href="https://www.instagram.com/fdlml_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -467,6 +467,7 @@
       const preloader = document.getElementById('preloader');
       setTimeout(() => {
         preloader.classList.add('loaded');
+        reveal(); // Call reveal on load
       }, 1000);
     });
 
@@ -476,12 +477,14 @@
       reveals.forEach(el => {
         const windowHeight = window.innerHeight;
         const revealTop = el.getBoundingClientRect().top;
-        if (revealTop < windowHeight - 150) {
+        const revealPoint = 100;
+        if (revealTop < windowHeight - revealPoint) {
           el.classList.add('active');
         }
       });
     };
     window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
     </script>
 </body>
 
