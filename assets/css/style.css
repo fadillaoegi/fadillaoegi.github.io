@@ -368,6 +368,17 @@ section { background: var(--bg); padding: 120px 0; }
 /*--------------------------------------------------------------
 # Services & Cards (Redesigned)
 --------------------------------------------------------------*/
+.capability-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+}
+
+.capability-link:hover {
+  text-decoration: none;
+}
+
 .icon-box {
   background: var(--surface) !important;
   border: 1px solid var(--accent-muted) !important;
