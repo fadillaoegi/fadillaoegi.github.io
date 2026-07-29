@@ -66,10 +66,13 @@
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
+    // Overshoot past the section's own top padding so the eyebrow/heading
+    // sits close to the header instead of leaving a huge blank gap.
+    let extra = 44
 
     let elementPos = select(el).offsetTop
     window.scrollTo({
-      top: elementPos - offset,
+      top: Math.max(0, elementPos - offset + extra),
       behavior: 'smooth'
     })
   }
@@ -187,55 +190,33 @@
   /**
    * Initiate portfolio lightbox 
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({ selector: '.portfolio-lightbox' });
+  }
 
   /**
-   * Portfolio details slider
+   * Sliders (only if Swiper is present)
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  if (typeof Swiper !== 'undefined') {
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true }
+    });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
+    new Swiper('.testimonials-slider', {
+      speed: 600,
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      slidesPerView: 'auto',
+      pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        1200: { slidesPerView: 3, spaceBetween: 20 }
       }
-    }
-  });
+    });
+  }
 
   /**
    * Animation on scroll
