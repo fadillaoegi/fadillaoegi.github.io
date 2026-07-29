@@ -182,17 +182,34 @@ h1, h2, h3, h4 {
 }
 #navbar a.nav-link {
   display: inline-flex;
-  padding: 9px 16px;
+  padding: 8px 16px;
   font-family: var(--font-head);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.4px;
   color: var(--text-muted);
+  background: transparent;
+  border: 2px solid transparent;
   border-radius: 10px;
-  transition: color 0.25s ease, background 0.25s ease;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-#navbar a.nav-link:hover,
-#navbar a.nav-link.active { color: var(--text); background: var(--surface); }
+#navbar a.nav-link:hover {
+  color: var(--text);
+  background: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 3px 0 0 var(--ledge);
+  transform: translateY(-1px);
+}
+#navbar a.nav-link.active {
+  color: var(--text);
+  background: var(--surface);
+  border-color: var(--border-strong);
+  box-shadow: 0 3px 0 0 var(--ledge-strong);
+}
+#navbar a.nav-link:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 0 var(--ledge);
+}
 
 /* Theme toggle button */
 .theme-toggle-item { margin-left: 8px; }
