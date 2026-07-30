@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Chunky 3D ledge (solid drop shadow) -->
+  <rect x="8" y="14" width="84" height="84" rx="18" fill="#8a8a8a"/>
+  <!-- Main tile -->
+  <rect x="8" y="6" width="84" height="84" rx="18" fill="#111111"/>
+  <!-- Bold "F" monogram -->
+  <text x="50" y="70"
+        font-family="'Outfit','Arial Black',system-ui,sans-serif"
+        font-weight="900"
+        font-size="66"
+        text-anchor="middle"
+        fill="#ffffff"
+        letter-spacing="-2">F</text>
+</svg>
